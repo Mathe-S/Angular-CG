@@ -1,0 +1,9 @@
+@import "bulma/css/bulma.css";
+
+.input {
+  box-sizing: border-box;
+}
+
+.button {
+  box-sizing: border-box;
+}
