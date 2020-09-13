@@ -1,0 +1,77 @@
+<div class="container">
+  <h3>Payment form</h3>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Payee Name</label>
+      <input (input)="onNameChange($event.target.value)" class="form-control" />
+    </div>
+
+    <div class="col">
+      <label> <b>Receiver Name</b></label>
+      <div>
+        {{ name | titlecase }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Payment Date</label>
+      <input
+        type="date"
+        (input)="onDateChange($event.target.value)"
+        class="form-control"
+      />
+    </div>
+
+    <div class="col">
+      <label> <b>Receiver Date</b></label>
+      <div>
+        {{ date | date: "MMMM d, y" }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Amount</label>
+      <input
+        (input)="onAmountChange($event.target.value)"
+        class="form-control"
+      />
+    </div>
+
+    <div class="col">
+      <label> <b>Amount</b></label>
+      <div>{{ amount | currency }}</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>height</label>
+      <input
+        (input)="onHeightChange($event.target.value)"
+        class="form-control"
+      />
+    </div>
+
+    <div class="col">
+      <label> <b>height</b></label>
+      <div>{{ height | number: "9.1-5" }}</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>MPG</label>
+      <input (input)="onMileChange($event.target.value)" class="form-control" />
+    </div>
+
+    <div class="col">
+      <label> <b>l'per 100km</b></label>
+      <div>{{ kilometers | convert }}</div>
+    </div>
+  </div>
+</div>
