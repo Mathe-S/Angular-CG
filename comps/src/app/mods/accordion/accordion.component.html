@@ -1,0 +1,17 @@
+<div class="ui styled accordion">
+  <ng-container *ngFor="let acc of acordionArray; let i = index">
+    <div
+      (click)="onClick(i)"
+      class="title"
+      [ngClass]="{ active: focused === i }"
+    >
+      <i class="dropdown icon"></i>
+      {{ acc.title }}
+    </div>
+    <div class="content" [ngClass]="{ active: focused === i }">
+      <p>
+        {{ acc.content }}
+      </p>
+    </div>
+  </ng-container>
+</div>
